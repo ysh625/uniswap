@@ -39,15 +39,15 @@ jobs:
       - name: Extract translations
         run: "yarn i18n:extract"
 
-      - name: Synchronize
-        uses: crowdin/github-action@1.1.0
-        with:
-          upload_sources: true
-          download_translations: true
-          project_id: 458284
-          token: ${{ secrets.CROWDIN_PERSONAL_TOKEN_SECRET }}
-          source: 'src/locales/en-US.po'
-          translation: 'src/locales/%locale%.po'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Synchronize
+      #   uses: crowdin/github-action@1.1.0
+      #   with:
+      #     upload_sources: true
+      #     download_translations: true
+      #     project_id: 458284
+      #     token: ${{ secrets.CROWDIN_PERSONAL_TOKEN_SECRET }}
+      #     source: 'src/locales/en-US.po'
+      #     translation: 'src/locales/%locale%.po'
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
