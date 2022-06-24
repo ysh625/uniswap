@@ -50,3 +50,4 @@ jobs:
           translation: 'src/locales/%locale%.po'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          api_token_env: CROWDIN_PERSONAL_TOKEN
